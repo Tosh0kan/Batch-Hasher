@@ -32,17 +32,7 @@ def dupe_scry(folder_path: str):
 
     for key, value in hash_filename_pair.items():
         if len(value) > 1:
-            dupe_text = ""
-            loop_cnt = 0
-            for e in value:
-                if loop_cnt != value.index(e):
-                    dupe_text += e
-                    loop_cnt += 1
-
-                else:
-                    dupe_text += e + " and "
-
-            dupe_text += " are dupes."
+            dupe_text = " and ".join(value) + " are dupes."
             print(dupe_text)
 
 
